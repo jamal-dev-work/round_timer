@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:round_timer/features/workout/view/timer_screen.dart';
 import 'package:round_timer/features/workout/widgets/text_field_widget.dart';
 
 class WorkoutSetupScreen extends StatelessWidget {
@@ -24,9 +25,16 @@ class WorkoutSetupScreen extends StatelessWidget {
 
             const Spacer(),
 
-            Center(
+            SizedBox(
+              width: double.infinity,
               child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () 
+                  {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const WorkoutTimerScreen()),
+                    );
+                  },
                   child: const Text('START WORKOUT'),
                 ),
             ),
