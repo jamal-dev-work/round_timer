@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:round_timer/features/workout/widgets/text_field_widget.dart';
 
 class WorkoutSetupScreen extends StatelessWidget {
   const WorkoutSetupScreen({super.key});
@@ -17,56 +18,9 @@ class WorkoutSetupScreen extends StatelessWidget {
               style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 24),
-            TextField(
-              keyboardType: TextInputType.number,
-              decoration: InputDecoration(
-                labelText: "Workout Time",
-                hintText: '180',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8),
-                ),
-              ),
-            ),
-            TextField(
-              keyboardType: TextInputType.number,
-              decoration: InputDecoration(
-                labelText: "Rest Time",
-                hintText: '30',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8),
-                ),
-              ),
-            ),
-            TextField(
-              keyboardType: TextInputType.number,
-              decoration: InputDecoration(
-                labelText: "Rounds",
-                hintText: '6',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8),
-                ),
-              ),
-            ),
-
-            // const Text('Workout Time'),
-            // const TextField(
-            //   keyboardType: TextInputType.number,
-            //   decoration: InputDecoration(hintText: '180'),
-            // ),
-
-            // const SizedBox(height: 16),
-            // const Text('Rest Time'),
-            // const TextField(
-            //   keyboardType: TextInputType.number,
-            //   decoration: InputDecoration(hintText: '60'),
-            // ),
-
-            // const SizedBox(height: 16),
-            // const Text('Rounds'),
-            // const TextField(
-            //   keyboardType: TextInputType.number,
-            //   decoration: InputDecoration(hintText: '5'),
-            // ),
+            TextFieldWidget(label: "Workout Time", hint: '180'),
+            TextFieldWidget(label: "Rest Time", hint: '30'),
+            TextFieldWidget(label: "Rounds", hint: '6'),
 
             const Spacer(),
 
